@@ -11,6 +11,8 @@ spec:
     metadata:
       labels:
         app: myapp
+      annotations:
+        avp.kubernetes.io/path: "secret/data/myapp/config"
     spec:
       containers:
       - name: myapp
