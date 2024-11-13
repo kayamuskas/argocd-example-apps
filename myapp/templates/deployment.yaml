@@ -16,7 +16,6 @@ spec:
       - name: myapp
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         env:
-        env:
         - name: DB_USERNAME
           value: <path:secret/data/myapp/config#username>
         - name: DB_PASSWORD
