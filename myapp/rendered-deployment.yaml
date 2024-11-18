@@ -1,0 +1,26 @@
+---
+# Source: myapp/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: "nginx:latest"
+        env:
+        - name: DB_TEST
+          value: <path:secret/data/guestbook-db#password>
+#        - name: DB_USERNAME
+#          value: <path:secret/data/myapp/config#username>
+#        - name: DB_PASSWORD
+#          value: <path:secret/data/myapp/config#password>

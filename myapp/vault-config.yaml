@@ -1,0 +1,10 @@
+#VAULT_AUTH_METHOD: "token"
+#VAULT_SKIP_VERIFY: "true"
+#VAULT_TOKEN: "root"
+#VAULT_TYPE: "vault"
+
+VAULT_ADDR: "http://localhost:8200"
+VAULT_TOKEN: root
+AVP_KV_VERSION: "2"
+AVP_TYPE: vault
+AVP_AUTH_TYPE: token
